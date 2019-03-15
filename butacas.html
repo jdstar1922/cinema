@@ -30,6 +30,9 @@
 <script src="clasePelicula.js"></script>
 <script src="jquery2.js"></script>
 <script>
+  $(document).ready(() => {
+        $("#nav").load("bar.html");
+      });
   let idbutaca;
   function cargardatosdelabutaca() {
     document.getElementById(idbutaca).style.background = "grey";
