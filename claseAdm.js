@@ -15,7 +15,7 @@ class _usuario {
       // Do the usual XHR stuff
       try {
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://bb-sita.herokuapp.comgit/api/nuevousuario");
+        xhr.open("POST", "https://bb-sita.herokuapp.com/api/nuevousuario");
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onload = function() {
           if (xhr.status === 200) {
@@ -37,10 +37,7 @@ class _usuario {
       // Do the usual XHR stuff
       try {
         var xhr = new XMLHttpRequest();
-        xhr.open(
-          "POST",
-          "https://bb-sita.herokuapp.comgit/api/modificausuario"
-        );
+        xhr.open("POST", "https://bb-sita.herokuapp.com/api/modificausuario");
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onload = function() {
           if (xhr.status === 200) {
@@ -62,7 +59,7 @@ class _usuario {
       // Do the usual XHR stuff
       try {
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://bb-sita.herokuapp.comgit/api/eliminausuario");
+        xhr.open("POST", "https://bb-sita.herokuapp.com/api/eliminausuario");
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onload = function() {
           if (xhr.status === 200) {
@@ -84,10 +81,7 @@ class _usuario {
       // Do the usual XHR stuff
       try {
         var xhr = new XMLHttpRequest();
-        xhr.open(
-          "POST",
-          "https://bb-sita.herokuapp.comgit/api/seleccionausuario"
-        );
+        xhr.open("POST", "https://bb-sita.herokuapp.com/api/seleccionausuario");
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onload = function() {
           if (xhr.status === 200) {
@@ -109,10 +103,7 @@ class _usuario {
       // Do the usual XHR stuff
       try {
         var xhr = new XMLHttpRequest();
-        xhr.open(
-          "POST",
-          "https://bb-sita.herokuapp.comgit/api/seleccionarporid"
-        );
+        xhr.open("POST", "https://bb-sita.herokuapp.com/api/seleccionarporid");
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onload = function() {
           if (xhr.status === 200) {
@@ -136,7 +127,7 @@ class _usuario {
         var xhr = new XMLHttpRequest();
         xhr.open(
           "POST",
-          "https://bb-sita.herokuapp.comgit/api/seleccionarpornombre"
+          "https://bb-sita.herokuapp.com/api/seleccionarpornombre"
         );
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onload = function() {
@@ -159,7 +150,7 @@ class _usuario {
       // Do the usual XHR stuff
       try {
         var xhr = new XMLHttpRequest();
-        xhr.open("POST", "https://bb-sita.herokuapp.comgit/api/login");
+        xhr.open("POST", "https://bb-sita.herokuapp.com/api/login");
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onload = function() {
           if (xhr.status === 200) {
