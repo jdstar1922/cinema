@@ -59,9 +59,9 @@
     $(document).ready(() => {
       $("#nav").load("bar.html");
     });
-    if (!localStorage.getItem("usuariologueado")) {
+    /* if (!localStorage.getItem("usuariologueado")) {
       location.href = "login.html";
-    }
+    } */
     let imagenenbase64 = "";
     $("#imgpelicula").change(function() {
       readURL(this);
