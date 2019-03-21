@@ -5,9 +5,30 @@
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
     />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   </head>
   <body>
-    <div id="nav"></div>
+    <nav id="navi">
+      <div>
+        <span><a href="index.html">Inicio</a></span>
+      </div>
+      <div>
+        <span><a href="calendario.html">Calendario</a></span>
+      </div>
+      <div>
+        <span><a href="formulario.html">Formulario</a></span>
+      </div>
+      <div>
+        <span><a href="loginAdm.html">Registrarse</a></span>
+      </div>
+      <div id="logueo">
+        <span><a href="login.html">Logeo</a></span>
+      </div>
+      <div id="cerrar">
+        <span><a href="#">Cerrar</a></span>
+      </div>
+    </nav>
     <div class="div1"></div>
     <div class="div2"></div>
     <div class="derAba">
@@ -41,8 +62,13 @@
   <script src="jquery2.js"></script>
   <script src="claseAdm.js"></script>
   <script type="text/javascript">
-    $(document).ready(() => {
-      $("#nav").load("bar.html");
+    if (!localStorage.getItem("usuariologueado")) {
+      document.getElementById("cerrar").style.display = "none";
+      document.getElementById("logueo").style.display = "block";
+    }
+    document.getElementById("cerrar").addEventListener("click", () => {
+      localStorage.removeItem("usuariologueado");
+      location.href = "login.html";
     });
     function botonenviarclick() {
       //crea el usuario con todos los parametros
@@ -75,6 +101,35 @@
     body {
       background: black;
       overflow-x: hidden;
+    }
+    #navi {
+      z-index: 1000;
+      position: fixed;
+      width: 50%;
+      display: grid;
+      grid-column-gap: 10px;
+      grid-template-areas: " auto auto auto auto auto";
+      transform: translateX(-50%);
+      left: 50%;
+      background: black;
+    }
+    #logueo {
+      display: none;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      height: 60px;
+      display: grid;
+      justify-items: center;
+      align-items: center;
+      border-bottom: blue 1px solid;
+      transition: 500ms;
+    }
+    a:hover {
+      transform: scale(1.1, 1.1);
+      box-shadow: 0 0 100px rgb(0, 0, 255);
+      background: blue;
     }
     .container {
       color: white;
@@ -195,11 +250,13 @@
       position: absolute;
       top: 100%;
       left: 100%;
+      z-index: -2;
     }
     .izqArr {
       position: absolute;
       top: 35px;
       left: 35px;
+      z-index: -2;
     }
     .circle,
     .circle2 {
@@ -257,6 +314,33 @@
       width: 140px;
       border-radius: 50%;
       box-shadow: inset 0 0 90px green;
+    }
+    @media screen and (max-width: 360px) {
+      .imagen {
+        display: none;
+      }
+      #navi {
+        display: none;
+        width: 100%;
+        grid-template-areas:
+          "auto"
+          "auto"
+          "auto"
+          "auto"
+          "auto";
+        transform: translate(0);
+        left: 0;
+      }
+      #navi a {
+        justify-items: start;
+        padding-left: 10px;
+      }
+      .div1 {
+        left: 19%;
+      }
+      .div2 {
+        right: 19%;
+      }
     }
   </style>
 </html>
